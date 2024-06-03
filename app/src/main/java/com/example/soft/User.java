@@ -1,86 +1,111 @@
 package com.example.soft;
 
 public class User {
-    public int id;
-    public int gender;
-    public int age;
-    public int hypertension;
-    public int heart_disease;
-    public float avg_glucose_level; // 수정
-    public float bmi; // 수정
-    public String smoking_status;
-    public String ever_married;
-    public String work_type;
-    public String Residence_type;
-    public int stroke;
+    private int id;
+    private String gender;
+    private int age;
+    private int hypertension;
+    private int heartDisease;
+    private float avgGlucoseLevel;
+    private float bmi;
+    private String smokingStatus;
+    private String everMarried;
+    private String workType;
+    private String residenceType;
+    private int stroke;
+    private int num;
 
     public User() {
-        // Default constructor required for calls to DataSnapshot.getValue(Problem.class)
+        // Default constructor required for calls to DataSnapshot.getValue(User.class)
     }
 
-    public User(int id, int gender, int age, int hypertension, int heart_disease, String ever_married,
-                String work_type, String Residence_type, float avg_glucose_level, float bmi, String smoking_status,
-                int stroke) {
+    public User(int num,int id, String gender, int age, int hypertension, int heartDisease, float avgGlucoseLevel, float bmi, String smokingStatus, String everMarried, String workType, String residenceType, int stroke) {
+        this.num=num;
         this.id = id;
         this.gender = gender;
         this.age = age;
         this.hypertension = hypertension;
-        this.heart_disease = heart_disease;
-        this.ever_married = ever_married;
-        this.work_type = work_type;
-        this.Residence_type = Residence_type;
-        this.avg_glucose_level = avg_glucose_level;
+        this.heartDisease = heartDisease;
+        this.avgGlucoseLevel = avgGlucoseLevel;
         this.bmi = bmi;
-        this.smoking_status = smoking_status;
+        this.smokingStatus = smokingStatus;
+        this.everMarried = everMarried;
+        this.workType = workType;
+        this.residenceType = residenceType;
         this.stroke = stroke;
     }
 
-    // Getter methods
+    // Getters and setters
+    public int getnum() {
+        return num;
+    }
     public int getId() {
         return id;
     }
 
-    public int getGender() {
+
+    public String getGender() {
         return gender;
     }
+
+
 
     public int getAge() {
         return age;
     }
 
+
+
     public int getHypertension() {
         return hypertension;
     }
 
+
+
     public int getHeartDisease() {
-        return heart_disease;
+        return heartDisease;
     }
 
-    public float getAvgGlucoseLevel() { // 수정
-        return avg_glucose_level;
+
+
+    public float getAvgGlucoseLevel() {
+        return avgGlucoseLevel;
     }
 
-    public float getBmi() { // 수정
+
+
+    public float getBmi() {
         return bmi;
     }
 
+
+
     public String getSmokingStatus() {
-        return smoking_status;
+        return smokingStatus;
     }
+
+
 
     public String getEverMarried() {
-        return ever_married;
+        return everMarried;
     }
+
+
 
     public String getWorkType() {
-        return work_type;
+        return workType;
     }
 
+
+
     public String getResidenceType() {
-        return Residence_type;
+        return residenceType;
     }
+
 
     public int getStroke() {
         return stroke;
     }
+
+
 }

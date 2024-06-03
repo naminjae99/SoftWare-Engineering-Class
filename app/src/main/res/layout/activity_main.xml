@@ -10,7 +10,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="소프트웨어 공학"
-        android:textSize="40sp"
+        android:textSize="35sp"
         android:paddingEnd="8dp"
         android:layout_marginBottom="8dp"
         android:gravity="center"/>
@@ -19,41 +19,110 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="당뇨병 어플"
-        android:textSize="40sp"
+        android:textSize="35sp"
         android:paddingEnd="8dp"
         android:layout_marginBottom="16dp"
         android:gravity="center"/>
 
-    <EditText
-        android:id="@+id/editTextName"
-        android:layout_width="match_parent"
+    <TextView
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="Name"
-        android:layout_marginBottom="8dp" />
+        android:text="건강정보 입력"
+        android:textSize="20sp"
+        android:paddingEnd="8dp"
+        android:layout_marginBottom="16dp"
+        android:gravity="center"/>
 
-    <EditText
-        android:id="@+id/editTextAge"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Age"
-        android:inputType="number"
-        android:layout_marginBottom="8dp" />
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="8dp">
 
-    <EditText
-        android:id="@+id/editTextHeight"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Height (cm)"
-        android:inputType="numberDecimal"
-        android:layout_marginBottom="8dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="이름: "
+            android:textSize="16sp"
+            android:paddingEnd="8dp"/>
 
-    <EditText
-        android:id="@+id/editTextWeight"
+        <EditText
+            android:id="@+id/editTextName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Name" />
+    </LinearLayout>
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Weight (kg)"
-        android:inputType="numberDecimal"
-        android:layout_marginBottom="16dp" />
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="8dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="나이: "
+            android:textSize="16sp"
+            android:paddingEnd="8dp"/>
+
+        <EditText
+            android:id="@+id/editTextAge"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Age"
+            android:inputType="number" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="8dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="키 (cm): "
+            android:textSize="16sp"
+            android:paddingEnd="8dp"/>
+
+        <EditText
+            android:id="@+id/editTextHeight"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Height (cm)"
+            android:inputType="numberDecimal" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="몸무게 (kg): "
+            android:textSize="16sp"
+            android:paddingEnd="8dp"/>
+
+        <EditText
+            android:id="@+id/editTextWeight"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Weight (kg)"
+            android:inputType="numberDecimal" />
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -64,14 +133,15 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Gender: "
+            android:text="성별        "
             android:textSize="16sp"
             android:paddingEnd="8dp"/>
 
         <RadioGroup
             android:id="@+id/radioGroupGender"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:orientation="horizontal">
 
             <RadioButton
@@ -92,19 +162,21 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:gravity="center_vertical">
+        android:gravity="center_vertical"
+        android:layout_marginTop="8dp">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Hypertension: "
+            android:text="고혈압     "
             android:textSize="16sp"
             android:paddingEnd="8dp"/>
 
         <RadioGroup
             android:id="@+id/radioGroupHypertension"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:orientation="horizontal">
 
             <RadioButton
@@ -121,24 +193,25 @@
         </RadioGroup>
     </LinearLayout>
 
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:gravity="center_vertical">
+        android:gravity="center_vertical"
+        android:layout_marginTop="8dp">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="HeartDisease: "
+            android:text="심장 질환 "
             android:textSize="16sp"
             android:paddingEnd="8dp"/>
 
         <RadioGroup
             android:id="@+id/radioGroupHeartDisease"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:orientation="horizontal">
 
             <RadioButton
@@ -155,24 +228,26 @@
         </RadioGroup>
     </LinearLayout>
 
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:gravity="center_vertical">
+        android:gravity="center_vertical"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="16dp">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Smoking: "
+            android:text="흡연          "
             android:textSize="16sp"
             android:paddingEnd="8dp"/>
 
         <RadioGroup
             android:id="@+id/radioGroupSmoking"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:orientation="horizontal">
 
             <RadioButton
@@ -188,7 +263,6 @@
                 android:text="No" />
         </RadioGroup>
     </LinearLayout>
-
 
     <Button
         android:id="@+id/buttonSubmit"

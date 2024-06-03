@@ -2,4 +2,6 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="stroke_probability">#FF0000</color> <!-- 뇌졸중 발병 확률의 색상 -->
+    <color name="others">#00FF00</color> <!-- 기타 항목의 색상 -->
 </resources>
