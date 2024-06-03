@@ -35,6 +35,10 @@ public class Riskinsameage extends AppCompatActivity {
     private float fage;
     private static final String TAG = "Riskinsameage";
 
+    private float calculateBMI(float weight, float height) {
+        return weight / ((height / 100) * (height / 100));
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -67,16 +71,23 @@ public class Riskinsameage extends AppCompatActivity {
                 int diabetesCount = 0;
                 int sameAgeCount = 0;
 
+                float totalBMI = 0;
+                float totalnomalBMI=0;
+
                 for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
                     // 데이터 가져오기
                     Float userAge = snapshot.child("age").getValue(Float.class);
                     Float userBloodSugar = snapshot.child("avg_glucose_level").getValue(Float.class); // 당뇨 수치
+                    Float userbmi=snapshot.child("bmi").getValue(Float.class);
 
                     if ((Math.abs(fage - userAge) <= 10)) {
                         sameAgeCount++;
+                        totalBMI += userbmi;
+
                         if (userBloodSugar != null) {
                             if (userBloodSugar <= 100) {
                                 normalCount++;
+                                totalnomalBMI += userbmi;
                             } else if (userBloodSugar <= 126) {
                                 riskCount++;
                             } else {
@@ -85,6 +96,9 @@ public class Riskinsameage extends AppCompatActivity {
                         }
                     }
                 }
+
+                float averageBMI = totalBMI / sameAgeCount;
+                float averageNormalBMI = totalnomalBMI / normalCount;
 
                 Log.d(TAG, "normalCount: " + normalCount);
                 Log.d(TAG, "riskCount: " + riskCount);
@@ -129,6 +143,8 @@ public class Riskinsameage extends AppCompatActivity {
                         intent.putExtra("height", height);
                         intent.putExtra("weight", weight);
                         intent.putExtra("bmi", bmi);
+                        intent.putExtra("averageBMI", averageBMI);
+                        intent.putExtra("averageNormalBMI", averageNormalBMI);
 
                         startActivity(intent);
                     }

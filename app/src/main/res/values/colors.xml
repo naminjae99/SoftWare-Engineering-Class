@@ -9,4 +9,5 @@
     <color name="normal">#32CD32</color> <!-- 연두색 -->
     <color name="risk">#FFD700</color> <!-- 노란색 -->
     <color name="diabetes">#FF0000</color> <!-- 빨간색 -->
+    <color name="haneal">#03A9F4</color> <!-- 빨간색 -->
 </resources>
