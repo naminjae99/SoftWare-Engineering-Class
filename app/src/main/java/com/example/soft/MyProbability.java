@@ -147,8 +147,14 @@ public class MyProbability extends AppCompatActivity {
             public void onClick(View v) {
                 // 다음 화면으로 이동
                 Intent intent = new Intent(MyProbability.this, Riskinsameage.class);
+                intent.putExtra("name", name);
+                intent.putExtra("age", age);
+                intent.putExtra("height", height);
+                intent.putExtra("weight", weight);
+                intent.putExtra("bmi", bmi);
                 startActivity(intent);
             }
         });
+
     }
 }
