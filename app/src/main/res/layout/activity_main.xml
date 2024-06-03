@@ -1,272 +1,331 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="16dp"
-    android:gravity="center_horizontal">
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="소프트웨어 공학"
-        android:textSize="35sp"
-        android:paddingEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:gravity="center"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="당뇨병 어플"
-        android:textSize="35sp"
-        android:paddingEnd="8dp"
-        android:layout_marginBottom="16dp"
-        android:gravity="center"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="건강정보 입력"
-        android:textSize="20sp"
-        android:paddingEnd="8dp"
-        android:layout_marginBottom="16dp"
-        android:gravity="center"/>
+    android:padding="50dp">
 
     <LinearLayout
+        android:id="@+id/ll1"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center_vertical"
-        android:layout_marginBottom="8dp">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-        <TextView
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="이름: "
-            android:textSize="16sp"
-            android:paddingEnd="8dp"/>
+            android:orientation="vertical"
+            android:layout_marginBottom="30dp">
 
-        <EditText
-            android:id="@+id/editTextName"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:hint="Name" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center_vertical"
-        android:layout_marginBottom="8dp">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="나이: "
-            android:textSize="16sp"
-            android:paddingEnd="8dp"/>
-
-        <EditText
-            android:id="@+id/editTextAge"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:hint="Age"
-            android:inputType="number" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center_vertical"
-        android:layout_marginBottom="8dp">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="키 (cm): "
-            android:textSize="16sp"
-            android:paddingEnd="8dp"/>
-
-        <EditText
-            android:id="@+id/editTextHeight"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:hint="Height (cm)"
-            android:inputType="numberDecimal" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center_vertical"
-        android:layout_marginBottom="16dp">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="몸무게 (kg): "
-            android:textSize="16sp"
-            android:paddingEnd="8dp"/>
-
-        <EditText
-            android:id="@+id/editTextWeight"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:hint="Weight (kg)"
-            android:inputType="numberDecimal" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center_vertical">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="성별        "
-            android:textSize="16sp"
-            android:paddingEnd="8dp"/>
-
-        <RadioGroup
-            android:id="@+id/radioGroupGender"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="horizontal">
-
-            <RadioButton
-                android:id="@+id/radioMale"
-                android:layout_width="wrap_content"
+            <TextView
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Male" />
+                android:layout_marginBottom="8dp"
+                android:text="건강 정보 입력"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
 
-            <RadioButton
-                android:id="@+id/radioFemale"
-                android:layout_width="wrap_content"
+            <TextView
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Female" />
-        </RadioGroup>
-    </LinearLayout>
+                android:text="당뇨병 발병 확률 예측을 위해 건강 정보를 입력하세요."
+                android:textSize="10sp"
+                android:textColor="@color/light_gray2" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center_vertical"
-        android:layout_marginTop="8dp">
+        </LinearLayout>
 
-        <TextView
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="고혈압     "
-            android:textSize="16sp"
-            android:paddingEnd="8dp"/>
+            android:orientation="vertical">
 
-        <RadioGroup
-            android:id="@+id/radioGroupHypertension"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="horizontal">
-
-            <RadioButton
-                android:id="@+id/radioHypertensionYes"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Yes" />
+                android:orientation="vertical"
+                android:layout_marginBottom="10dp">
 
-            <RadioButton
-                android:id="@+id/radioHypertensionNo"
-                android:layout_width="wrap_content"
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Name"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:layout_marginBottom="5dp"/>
+
+                <EditText
+                    android:id="@+id/editTextName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:background="@drawable/text_field" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="No" />
-        </RadioGroup>
-    </LinearLayout>
+                android:orientation="vertical"
+                android:layout_marginBottom="10dp">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center_vertical"
-        android:layout_marginTop="8dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Age"
+                    android:textSize="10sp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="5dp"/>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="심장 질환 "
-            android:textSize="16sp"
-            android:paddingEnd="8dp"/>
+                <EditText
+                    android:id="@+id/editTextAge"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:inputType="number"
+                    android:textSize="15sp"
+                    android:background="@drawable/text_field" />
 
-        <RadioGroup
-            android:id="@+id/radioGroupHeartDisease"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="horizontal">
+            </LinearLayout>
 
-            <RadioButton
-                android:id="@+id/radioHeartDiseaseYes"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Yes" />
+                android:orientation="vertical"
+                android:layout_marginBottom="10dp">
 
-            <RadioButton
-                android:id="@+id/radioHeartDiseaseNo"
-                android:layout_width="wrap_content"
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Height (cm)"
+                    android:textSize="10sp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="5dp"/>
+
+                <EditText
+                    android:id="@+id/editTextHeight"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:inputType="numberDecimal"
+                    android:textSize="15sp"
+                    android:background="@drawable/text_field" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="No" />
-        </RadioGroup>
-    </LinearLayout>
+                android:orientation="vertical"
+                android:layout_marginBottom="10dp">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center_vertical"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="16dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Weight (kg)"
+                    android:textSize="10sp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="5dp"/>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="흡연          "
-            android:textSize="16sp"
-            android:paddingEnd="8dp"/>
+                <EditText
+                    android:id="@+id/editTextWeight"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:inputType="numberDecimal"
+                    android:textSize="15sp"
+                    android:background="@drawable/text_field" />
 
-        <RadioGroup
-            android:id="@+id/radioGroupSmoking"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="horizontal">
+            </LinearLayout>
 
-            <RadioButton
-                android:id="@+id/radioSmokingYes"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Yes" />
+                android:orientation="horizontal"
+                android:gravity="center">
 
-            <RadioButton
-                android:id="@+id/radioSmokingNo"
-                android:layout_width="wrap_content"
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="Gender"
+                    android:textColor="@color/black"
+                    android:textSize="10sp"
+                    android:textStyle="bold" />
+
+                <RadioGroup
+                    android:id="@+id/radioGroupGender"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <RadioButton
+                        android:id="@+id/radioMale"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/input_gray"
+                        android:textSize="10sp"
+                        android:textColor="@color/black"
+                        android:text="Male"/>
+
+                    <RadioButton
+                        android:id="@+id/radioFemale"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/input_gray"
+                        android:textSize="10sp"
+                        android:textColor="@color/black"
+                        android:text="Female"/>
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="No" />
-        </RadioGroup>
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="Hypertension"
+                    android:textColor="@color/black"
+                    android:textSize="10sp"
+                    android:textStyle="bold" />
+
+                <RadioGroup
+                    android:id="@+id/radioGroupHypertension"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/radioHypertensionYes"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/input_gray"
+                        android:textSize="10sp"
+                        android:textColor="@color/black"
+                        android:text="Yes"/>
+
+                    <RadioButton
+                        android:id="@+id/radioHypertensionNo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/input_gray"
+                        android:textSize="10sp"
+                        android:textColor="@color/black"
+                        android:text="No"/>
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="HeartDisease"
+                    android:textColor="@color/black"
+                    android:textSize="10sp"
+                    android:textStyle="bold" />
+
+                <RadioGroup
+                    android:id="@+id/radioGroupHeartDisease"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/radioHeartDiseaseYes"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/input_gray"
+                        android:textSize="10sp"
+                        android:textColor="@color/black"
+                        android:text="Yes"/>
+
+                    <RadioButton
+                        android:id="@+id/radioHeartDiseaseNo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/input_gray"
+                        android:textSize="10sp"
+                        android:textColor="@color/black"
+                        android:text="No"/>
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="Smoking"
+                    android:textColor="@color/black"
+                    android:textSize="10sp"
+                    android:textStyle="bold" />
+
+                <RadioGroup
+                    android:id="@+id/radioGroupSmoking"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/radioSmokingYes"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/input_gray"
+                        android:textSize="10sp"
+                        android:textColor="@color/black"
+                        android:text="Yes"/>
+
+                    <RadioButton
+                        android:id="@+id/radioSmokingNo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/input_gray"
+                        android:textSize="10sp"
+                        android:textColor="@color/black"
+                        android:text="No"/>
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
     </LinearLayout>
 
     <Button
         android:id="@+id/buttonSubmit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Submit" />
-</LinearLayout>
+        android:background="@drawable/button_primary"
+        android:textColor="@color/white"
+        android:text="Next"
+        android:layout_alignBottom="@id/ll1"/>
+
+</RelativeLayout>

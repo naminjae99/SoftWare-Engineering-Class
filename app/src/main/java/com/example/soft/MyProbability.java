@@ -25,7 +25,6 @@ import java.util.Arrays;
 
 public class MyProbability extends AppCompatActivity {
 
-    private TextView textViewName;
     private TextView textViewProbability;
     private String name;
     private int age, hypertension, heartDisease, smoking;
@@ -35,9 +34,17 @@ public class MyProbability extends AppCompatActivity {
     private float fage;
     private static final String TAG = "MyProbability";
 
-    // PieChart 선언
     private PieChart pieChart;
     private Button buttonNext;
+    private TextView tage;
+    private TextView tname;
+    private TextView thypertension;
+    private TextView theartDisease;
+    private TextView tsmoking;
+    private TextView tgender;
+    private TextView tbmi;
+    private TextView theight;
+    private TextView tweight;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,10 +67,26 @@ public class MyProbability extends AppCompatActivity {
 
         fage = age;
 
-        // TextView 찾기
-        textViewName = findViewById(R.id.textViewName);
+        // TextView
+        tname = findViewById(R.id.tname);
         // TextView에 데이터 설정
-        textViewName.setText(name + "님의 당뇨병 발병 확률");
+        tname.setText(name + "님의 당뇨병 발병 확률");
+        tage = findViewById(R.id.tage);
+        tage.setText("Age: "+String.valueOf(age));
+        theight = findViewById(R.id.theight);
+        theight.setText("Height: "+String.format("%.1f cm", height));
+        tweight = findViewById(R.id.tweight);
+        tweight.setText("Weight: "+String.format("%.1f kg", weight));
+        tsmoking = findViewById(R.id.tsmoking);
+        tsmoking.setText("Smoking: "+(smoking == 0 ? "No" : "Yes"));
+        tbmi = findViewById(R.id.tbmi);
+        tbmi.setText("BMI: "+String.format("%.1f", bmi));
+        tgender = findViewById(R.id.tgender);
+        tgender.setText("Gender: "+ (gender == 0 ? "Male" : "Female"));
+        thypertension = findViewById(R.id.thypertension);
+        thypertension.setText("Hypertension: "+ (hypertension == 0 ? "No" : "Yes"));
+        theartDisease = findViewById(R.id.theartDisease);
+        theartDisease.setText("HeartDisease: "+ (heartDisease == 0 ? "No" : "Yes"));
 
         textViewProbability = findViewById(R.id.textViewProbability);
 
