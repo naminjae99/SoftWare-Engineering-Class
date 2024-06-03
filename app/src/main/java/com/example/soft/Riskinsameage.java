@@ -121,9 +121,15 @@ public class Riskinsameage extends AppCompatActivity {
                 buttonNext.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        // 다음 페이지로 이동하는 코드 추가
-                        // 예를 들어:
+
+
                         Intent intent = new Intent(Riskinsameage.this, Recommend.class);
+                        intent.putExtra("name", name);
+                        intent.putExtra("age", age);
+                        intent.putExtra("height", height);
+                        intent.putExtra("weight", weight);
+                        intent.putExtra("bmi", bmi);
+
                         startActivity(intent);
                     }
                 });
