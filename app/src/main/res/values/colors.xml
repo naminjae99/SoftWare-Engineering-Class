@@ -2,4 +2,20 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="stroke_probability">#ed3241</color> <!-- 뇌졸중 발병 확률의 색상 -->
+    <color name="others">#c5c6cc</color> <!-- 기타 항목의 색상 -->
+
+    <!-- 새로운 색상 추가 -->
+    <color name="normal">#9dd84b</color> <!-- 연두색 -->
+    <color name="risk">#ffd400</color> <!-- 노란색 -->
+    <color name="diabetes">#ed3241</color> <!-- 빨간색 -->
+    <color name="haneal">#03A9F4</color> <!-- 빨간색 -->
+
+    <color name="darkset">#006ffd</color>
+    <color name="light_gray">#f8f9fe</color>
+    <color name="light_gray2">#71727A</color>
+    <color name="g_grenn">#9dd84b</color>
+    <color name="g_yellow">#ffd400</color>
+    <color name="g_red">#ed3241</color>
+    <color name="input_gray">#c5c6cc</color>
 </resources>
