@@ -7,7 +7,7 @@
     <LinearLayout
         android:id="@+id/ll2"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_weight="3"
         android:orientation="vertical">
 
@@ -21,12 +21,12 @@
                 android:id="@+id/pieChart"
                 android:layout_width="match_parent"
                 android:layout_height="300dp"
-                android:layout_marginBottom="16dp" />
+                android:layout_margin="16dp" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="1"
             android:orientation="vertical">
 
@@ -144,14 +144,13 @@
 
     </LinearLayout>
 
-    <Button
+    <android.widget.Button
         android:id="@+id/buttonNext"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/button_primary"
         android:textColor="@color/white"
         android:text="Next"
-        android:layout_below="@id/ll2"
-        android:layout_marginBottom="16dp"/>
+        android:layout_alignBottom="@+id/ll2"/>
 
 </RelativeLayout>

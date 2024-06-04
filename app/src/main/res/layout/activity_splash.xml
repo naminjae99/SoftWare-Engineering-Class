@@ -39,7 +39,7 @@
         android:textSize="30sp"
         android:textColor="@color/white"
         android:background="@drawable/button_terciary"
-        android:layout_marginTop="30dp" />
+        android:layout_marginTop="40dp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -47,7 +47,7 @@
         android:text="※당뇨병 예측 앱은 데이셋을 기반으로 결과를 예측하므로\n예측 결과를 맹신해서는 안 되며\n정확한 진단을 위해 병원 방문과 전문의와의 상담을 권합니다."
         android:textColor="@color/white"
         android:textSize="10sp"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="150dp"
         android:textAlignment="center"/>
 
 
