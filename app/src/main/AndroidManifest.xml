@@ -38,7 +38,13 @@
             android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.DayNight.DarkActionBar" />
         <activity
-            android:name=".FoodActivity"
+            android:name=".BadFoodActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.DayNight.DarkActionBar" />
+        <activity
+            android:name=".GoodFoodActivity"
             android:exported="true"
             android:label="@string/app_name"
             android:screenOrientation="portrait"

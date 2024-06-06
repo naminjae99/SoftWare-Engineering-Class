@@ -19,7 +19,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        if(!validateInputs()){
+            return;
+        }
         // 레이아웃에서 위젯들을 찾아와 변수에 할당
         editTextName = findViewById(R.id.editTextName);
         editTextAge = findViewById(R.id.editTextAge);
@@ -63,7 +65,73 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+    // EditText 입력 유효성을 확인하는 메서드
+    private boolean validateInputs() {
+        boolean isValid = true;
 
+        String name = editTextName.getText().toString().trim();
+        String ageStr = editTextAge.getText().toString().trim();
+        String heightStr = editTextHeight.getText().toString().trim();
+        String weightStr = editTextWeight.getText().toString().trim();
+
+        if (name.isEmpty()) {
+            editTextName.setError("이름을 입력해주세요");
+            isValid = false;
+        } else if (!name.matches("[a-zA-Z가-힣ㄱ-ㅎㅏ-ㅣ ]+")) {
+            editTextName.setError("올바른 이름을 입력해주세요\n(특수문자, 숫자 제외)");
+            isValid = false;
+        }
+
+        if (ageStr.isEmpty()) {
+            editTextAge.setError("나이를 입력해주세요");
+            isValid = false;
+        } else {
+            try {
+                int age = Integer.parseInt(ageStr);
+                if (age <= 0 || age > 150) {
+                    editTextAge.setError("올바른 나이를 입력해주세요\n(1~150)");
+                    isValid = false;
+                }
+            } catch (NumberFormatException e) {
+                editTextAge.setError("숫자로 입력해주세요");
+                isValid = false;
+            }
+        }
+
+        if (heightStr.isEmpty()) {
+            editTextHeight.setError("키를 입력해주세요");
+            isValid = false;
+        } else {
+            try {
+                float height = Float.parseFloat(heightStr);
+                if (height <= 0 || height > 250) {
+                    editTextHeight.setError("올바른 키를 입력해주세요\n(1~250)");
+                    isValid = false;
+                }
+            } catch (NumberFormatException e) {
+                editTextHeight.setError("숫자로 입력해주세요");
+                isValid = false;
+            }
+        }
+
+        if (weightStr.isEmpty()) {
+            editTextWeight.setError("몸무게를 입력해주세요");
+            isValid = false;
+        } else {
+            try {
+                float weight = Float.parseFloat(weightStr);
+                if (weight <= 0 || weight > 250) {
+                    editTextWeight.setError("올바른 몸무게를 입력해주세요\n(1~250)");
+                    isValid = false;
+                }
+            } catch (NumberFormatException e) {
+                editTextWeight.setError("숫자로 입력해주세요");
+                isValid = false;
+            }
+        }
+
+        return isValid;
+    }
     // 라디오 그룹에서 선택된 라디오 버튼의 값 반환하는 메서드
     private int getSelectedRadioValue(RadioGroup radioGroup) {
         int selectedId = radioGroup.getCheckedRadioButtonId();

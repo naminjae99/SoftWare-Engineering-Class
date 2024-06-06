@@ -31,7 +31,14 @@ public class FoodAdapter extends RecyclerView.Adapter<FoodAdapter.FoodViewHolder
         FoodData.Food food = foodList.get(position);
         holder.foodName.setText(food.getName());
         holder.foodDescription.setText(food.getDescription());
-        holder.foodImage.setImageResource(food.getImageResId());
+
+        // food.getImageResId()가 "bf0"와 같은 String 형태로 반환된다고 가정합니다.
+        String imageResName = food.getImageResId();
+        // context는 holder가 속한 Activity나 Fragment의 context를 사용합니다.
+        int resId = holder.itemView.getContext().getResources().getIdentifier(
+                imageResName, "drawable", holder.itemView.getContext().getPackageName());
+        // 얻은 리소스 ID를 사용하여 이미지를 설정합니다.
+        holder.foodImage.setImageResource(resId);
 
         holder.foodUrl.setOnClickListener(new View.OnClickListener() {
             @Override

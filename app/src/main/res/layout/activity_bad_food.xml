@@ -35,13 +35,13 @@
     </LinearLayout>
 
     <android.widget.Button
-        android:id="@+id/nextButton"
+        android:id="@+id/retryButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignBottom="@id/ll7"
         android:background="@drawable/button_primary"
         android:textColor="@color/white"
-        android:text="Next"
+        android:text="Retry"
         android:textAllCaps="false" />
 
 </RelativeLayout>

@@ -126,7 +126,7 @@ public class GoodExerciseActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // 다음 화면으로 이동
-                Intent intent = new Intent(GoodExerciseActivity.this, Riskinsameage.class);
+                Intent intent = new Intent(GoodExerciseActivity.this, GoodFoodActivity.class);
                 intent.putExtra("name", name);
                 startActivity(intent);
             }

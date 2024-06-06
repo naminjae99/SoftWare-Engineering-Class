@@ -68,15 +68,15 @@ public class FoodData {
     }
 
     public static class Food {
-            private String description;
-            private String name;
-            private String url;
-            private int imageResId;
+        private String description;
+        private String name;
+        private String url;
+        private String imageResId;
 
-            public Food() {
+        public Food() {
         }
 
-        public Food(String description, String name, String url, int imageResId) {
+        public Food(String description, String name, String url, String imageResId) {
             this.description = description;
             this.name = name;
             this.url = url;
@@ -107,7 +107,7 @@ public class FoodData {
             this.url = url;
         }
 
-        public void setImageResId(int imageResId) { this.imageResId = imageResId; }
-        public int getImageResId() { return imageResId; }
+        public void setImageResId(String imageResId) { this.imageResId = imageResId; }
+        public String getImageResId() { return imageResId; }
     }
 }
