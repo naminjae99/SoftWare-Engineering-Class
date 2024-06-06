@@ -19,9 +19,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        if(!validateInputs()){
-            return;
-        }
+
         // 레이아웃에서 위젯들을 찾아와 변수에 할당
         editTextName = findViewById(R.id.editTextName);
         editTextAge = findViewById(R.id.editTextAge);
@@ -36,8 +34,12 @@ public class MainActivity extends AppCompatActivity {
         // Submit 버튼 클릭 시 실행될 리스너 설정
         buttonSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
+
             public void onClick(View v) {
                 // 사용자 입력 값 가져오기
+                if(!validateInputs()){
+                    return;
+                }
                 String name = editTextName.getText().toString();
                 int age = Integer.parseInt(editTextAge.getText().toString());
                 float height = Float.parseFloat(editTextHeight.getText().toString());
