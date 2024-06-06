@@ -1,4 +1,4 @@
-// GoodFoodActivity.java
+
 package com.example.soft;
 
 import android.content.Intent;

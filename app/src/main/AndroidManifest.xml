@@ -16,49 +16,43 @@
         <activity
             android:name=".Riskinsameage"
             android:exported="true"
-            android:label="@string/app_name"
-            android:screenOrientation="portrait"
-            android:theme="@style/Theme.AppCompat.DayNight.DarkActionBar" />
-        <activity
-            android:name=".ExerciseDetailActivity"
-            android:exported="true"
-            android:label="@string/app_name"
+            android:label="동연령대 확률"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.DayNight.DarkActionBar" />
         <activity
             android:name=".GoodExerciseActivity"
             android:exported="true"
-            android:label="@string/app_name"
+            android:label="좋은 운동"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.DayNight.DarkActionBar" />
         <activity
             android:name=".Recommend"
             android:exported="true"
-            android:label="@string/app_name"
+            android:label="동연령대 bmi"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.DayNight.DarkActionBar" />
         <activity
             android:name=".BadFoodActivity"
             android:exported="true"
-            android:label="@string/app_name"
+            android:label="나쁜 음식"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.DayNight.DarkActionBar" />
         <activity
             android:name=".GoodFoodActivity"
             android:exported="true"
-            android:label="@string/app_name"
+            android:label="좋은 음식"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.DayNight.DarkActionBar" />
         <activity
             android:name=".MyProbability"
             android:exported="true"
-            android:label="@string/app_name"
+            android:label="나의 당뇨병"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.DayNight.DarkActionBar" />
         <activity
             android:name=".MainActivity"
             android:exported="true"
-            android:label="@string/app_name"
+            android:label="사용자 정보 입력"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.DayNight.DarkActionBar" />
         <activity
