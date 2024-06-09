@@ -2,6 +2,55 @@ package com.example.soft;
 import java.util.*;
 
 public class FoodData {
+
+        private String description;
+        private String name;
+        private String url;
+        private String imageResId;
+
+        public FoodData() {
+        }
+
+        public FoodData(String description, String name, String url, String imageResId) {
+            this.description = description;
+            this.name = name;
+            this.url = url;
+            this.imageResId = imageResId;
+        }
+
+        public String getDescription() {
+            return description;
+        }
+
+        public void setDescription(String description) {
+            this.description = description;
+        }
+
+        public String getName() {
+            return name;
+        }
+
+        public void setName(String name) {
+            this.name = name;
+        }
+
+        public String getUrl() {
+            return url;
+        }
+
+        public void setUrl(String url) {
+            this.url = url;
+        }
+
+        public void setImageResId(String imageResId) { this.imageResId = imageResId; }
+        public String getImageResId() { return imageResId; }
+
+}
+/*
+package com.example.soft;
+import java.util.*;
+
+public class FoodData {
     private BadFoods bad_foods;
     private GoodFoods good_foods;
 
@@ -111,3 +160,4 @@ public class FoodData {
         public String getImageResId() { return imageResId; }
     }
 }
+ */

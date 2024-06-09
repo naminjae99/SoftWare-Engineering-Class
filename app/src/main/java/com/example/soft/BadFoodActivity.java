@@ -61,14 +61,14 @@ public class BadFoodActivity extends AppCompatActivity {
         databaseReference.child(path).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                List<FoodData.Food> foodsList = new ArrayList<>();
+                List<FoodData> foodsList = new ArrayList<>();
                 // 데이터 스냅샷을 순회하면서 음식 데이터를 가져와 리스트에 추가
                 for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
                     String description = snapshot.child("description").getValue(String.class);
                     String name = snapshot.child("name").getValue(String.class);
                     String url = snapshot.child("url").getValue(String.class);
                     String imageResId = snapshot.child("imageResId").getValue(String.class);
-                    foodsList.add(new FoodData.Food(description, name, url, imageResId));
+                    foodsList.add(new FoodData(description, name, url, imageResId));
                 }
                 // ViewPager2로 음식 데이터를 보여주는 어댑터 설정
                 ViewPager2 viewPager2 = findViewById(R.id.viewPager);

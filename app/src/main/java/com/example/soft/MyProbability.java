@@ -64,7 +64,9 @@ public class MyProbability extends AppCompatActivity {
         weight = getIntent().getFloatExtra("weight", 0);
         smoking = getIntent().getIntExtra("smoking", 0);
         bmi = weight / ((height / 100) * (height / 100)); // BMI 계산
-
+        hypertension=getIntent().getIntExtra("hypertension", 0);
+        heartDisease=getIntent().getIntExtra("heartDisease", 0);
+        gender=getIntent().getIntExtra("gender", 0);
         fage = age;
 
         // TextView
@@ -82,7 +84,7 @@ public class MyProbability extends AppCompatActivity {
         tbmi = findViewById(R.id.tbmi);
         tbmi.setText("BMI: "+String.format("%.1f", bmi));
         tgender = findViewById(R.id.tgender);
-        tgender.setText("Gender: "+ (gender == 0 ? "Male" : "Female"));
+        tgender.setText("Gender: "+ (gender == 1 ? "Male" : "Female"));
         thypertension = findViewById(R.id.thypertension);
         thypertension.setText("Hypertension: "+ (hypertension == 0 ? "No" : "Yes"));
         theartDisease = findViewById(R.id.theartDisease);

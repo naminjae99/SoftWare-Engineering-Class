@@ -13,9 +13,9 @@ import android.net.Uri;
 import java.util.List;
 
 public class FoodAdapter extends RecyclerView.Adapter<FoodAdapter.FoodViewHolder> {
-    private List<FoodData.Food> foodList;
+    private List<FoodData> foodList;
 
-    public FoodAdapter(List<FoodData.Food> foodList) {
+    public FoodAdapter(List<FoodData> foodList) {
         this.foodList = foodList;
     }
 
@@ -28,7 +28,7 @@ public class FoodAdapter extends RecyclerView.Adapter<FoodAdapter.FoodViewHolder
 
     @Override
     public void onBindViewHolder(@NonNull FoodViewHolder holder, int position) {
-        FoodData.Food food = foodList.get(position);
+        FoodData food = foodList.get(position);
         holder.foodName.setText(food.getName());
         holder.foodDescription.setText(food.getDescription());
 

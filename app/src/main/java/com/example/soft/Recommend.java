@@ -2,7 +2,6 @@ package com.example.soft;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -61,7 +60,7 @@ public class Recommend extends AppCompatActivity {
             @Override
             public void onClick (View v){
                 // 다음 화면으로 이동
-                Intent intent = new Intent(Recommend.this, GoodExerciseActivity.class);
+                Intent intent = new Intent(Recommend.this, ExerciseActivity.class);
                 intent.putExtra("name", name);
 
                 startActivity(intent);

@@ -1,60 +1,40 @@
 package com.example.soft;
-import java.util.*;
-
 public class ExerciseData {
-    private List<Exercise> exercises;
+    private String name;
+    private String steps;
+    private String target;
 
     public ExerciseData() {
+        // 기본 생성자 (Firebase에서 필요)
     }
 
-    public ExerciseData(List<Exercise> exercises) {
-        this.exercises = exercises;
+    public ExerciseData(String name, String steps, String target) {
+        this.name = name;
+        this.steps = steps;
+        this.target = target;
     }
 
-    public List<Exercise> getExercises() {
-        return exercises;
+    public String getName() {
+        return name;
     }
 
-    public void setExercises(List<Exercise> exercises) {
-        this.exercises = exercises;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public static class Exercise {
-        private String name;
-        private String target;
-        private String steps;
+    public String getSteps() {
+        return steps;
+    }
 
-        public Exercise() {
-        }
+    public void setSteps(String steps) {
+        this.steps = steps;
+    }
 
-        public Exercise(String name, String target, String steps) {
-            this.name = name;
-            this.target = target;
-            this.steps = steps;
-        }
+    public String getTarget() {
+        return target;
+    }
 
-        public String getName() {
-            return name;
-        }
-
-        public void setName(String name) {
-            this.name = name;
-        }
-
-        public String getTarget() {
-            return target;
-        }
-
-        public void setTarget(String target) {
-            this.target = target;
-        }
-
-        public String getSteps() {
-            return steps;
-        }
-
-        public void setSteps(String steps) {
-            this.steps = steps;
-        }
+    public void setTarget(String target) {
+        this.target = target;
     }
 }

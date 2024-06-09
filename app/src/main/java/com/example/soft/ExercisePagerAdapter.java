@@ -3,17 +3,19 @@ package com.example.soft;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
+
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.viewpager2.widget.ViewPager2;
 
 import java.util.List;
 
-public class ExerciseAdapter extends RecyclerView.Adapter<ExerciseAdapter.ExerciseViewHolder> {
-    private List<ExerciseData.Exercise> exerciseList;
+public class ExercisePagerAdapter extends RecyclerView.Adapter<ExercisePagerAdapter.ExerciseViewHolder> {
 
-    public ExerciseAdapter(List<ExerciseData.Exercise> exerciseList) {
+    private List<ExerciseData> exerciseList;
+
+    public ExercisePagerAdapter(List<ExerciseData> exerciseList) {
         this.exerciseList = exerciseList;
     }
 
@@ -26,11 +28,10 @@ public class ExerciseAdapter extends RecyclerView.Adapter<ExerciseAdapter.Exerci
 
     @Override
     public void onBindViewHolder(@NonNull ExerciseViewHolder holder, int position) {
-        ExerciseData.Exercise exercises = exerciseList.get(position);
-        holder.exerciseName.setText(exercises.getName());
-        holder.exerciseTarget.setText(exercises.getTarget());
-        holder.exerciseSteps.setText(exercises.getSteps());
-
+        ExerciseData exercise = exerciseList.get(position);
+        holder.nameTextView.setText(exercise.getName());
+        holder.stepsTextView.setText(exercise.getSteps());
+        holder.targetTextView.setText(exercise.getTarget());
     }
 
     @Override
@@ -40,15 +41,15 @@ public class ExerciseAdapter extends RecyclerView.Adapter<ExerciseAdapter.Exerci
 
     public static class ExerciseViewHolder extends RecyclerView.ViewHolder {
 
-        TextView exerciseName;
-        TextView exerciseTarget;
-        TextView exerciseSteps;
+        TextView nameTextView;
+        TextView stepsTextView;
+        TextView targetTextView;
 
         public ExerciseViewHolder(@NonNull View itemView) {
             super(itemView);
-            exerciseName = itemView.findViewById(R.id.exercise_name);
-            exerciseTarget = itemView.findViewById(R.id.exercise_target);
-            exerciseSteps = itemView.findViewById(R.id.exercise_steps);
+            nameTextView = itemView.findViewById(R.id.exercise_name);
+            stepsTextView = itemView.findViewById(R.id.exercise_steps);
+            targetTextView = itemView.findViewById(R.id.exercise_target);
         }
     }
 }
