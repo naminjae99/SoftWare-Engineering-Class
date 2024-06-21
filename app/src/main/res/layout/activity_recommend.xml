@@ -17,13 +17,49 @@
             android:background="@drawable/box_border"
             android:orientation="vertical">
 
-            <!-- BarChart -->
-            <com.github.mikephil.charting.charts.BarChart
-                android:id="@+id/barChart"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:layout_marginBottom="8dp"/>
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <com.github.mikephil.charting.charts.BarChart
+                    android:id="@+id/barChart"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:layout_marginBottom="8dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <!-- 첫 번째 텍스트뷰: "평균 BMI" -->
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="            평균 BMI" />
+
+                    <!-- 두 번째 텍스트뷰: "사용자 BMI" -->
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="사용자 BMI"
+                        android:textAlignment="center"/>
+
+                    <!-- 세 번째 텍스트뷰: "정상 평균 BMI" -->
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="정상 평균 BMI"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
 
             <TextView
                 android:layout_width="match_parent"

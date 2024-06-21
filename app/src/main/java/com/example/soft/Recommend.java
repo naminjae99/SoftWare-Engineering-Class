@@ -90,7 +90,7 @@ public class Recommend extends AppCompatActivity {
         barChart.setDrawGridBackground(false);
 
         // X축 값 설정
-        final String[] xAxisLabels = new String[]{"평균 BMI", "사용자 BMI", "정상 평균 BMI"};
+        final String[] xAxisLabels = new String[]{"", "", ""};
         barChart.getXAxis().setValueFormatter(new IndexAxisValueFormatter(xAxisLabels));
 
         barChart.invalidate(); // 차트 다시 그리기
